@@ -1,10 +1,21 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Demonstrates caching of the results of a function that may 
+## be needed repeatedly and require a long processing time
 
-## Write a short comment describing this function
+## Store the makeCacheMatrix () function below in a variable and then
+## set that variable to a square matrix. 
 
 makeCacheMatrix <- function(x = matrix()) {
-
+  m<-NULL
+  set<-function(y){
+  x<<-y
+  m<<-NULL
+}
+get<-function() x
+setmatrix<-function(solve) m<<- solve
+getmatrix<-function() m
+list(set=set, get=get,
+   setmatrix=setmatrix,
+   getmatrix=getmatrix)
 }
 
 
