@@ -20,8 +20,17 @@ list(set=set, get=get,
 }
 
 
-## Write a short comment describing this function
+## Sets variable m and retrieves valuae of cached matrix from function above.
 
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+cacheSolve <- function(x=matrix(), ...) {
+    m<-x$getmatrix()
+    if(!is.null(m)){
+       message("getting cached data")
+       return(m)
+     }
+     matrix<-x$get()
+     m<-solve(matrix, ...)
+     x$setmatrix(m)
+     m
 }
+
