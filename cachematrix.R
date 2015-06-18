@@ -2,7 +2,8 @@
 ## be needed repeatedly and require a long processing time
 
 ## Store the makeCacheMatrix () function below in a variable and then
-## set that variable to a square matrix. 
+## set that variable to a square matrix. Uses solve() to find the
+## inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   m<-NULL
